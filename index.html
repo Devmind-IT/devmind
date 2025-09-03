@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Devmind – Domains, Hosting, WordPress & A–Z Digital Services</title>
+    <meta name="description"
+        content="Devmind provides end‑to‑end digital services: bus/train/flight ticket booking, logo & poster design, social media marketing, GMB design, digital marketing, SEO, website design & development, WordPress, IT services, domain & hosting – A to Z solutions." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#0ea5e9">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Devmind – A–Z Digital Services" />
+    <meta property="og:description"
+        content="Domains & hosting, WordPress, SEO, design, marketing, ticket bookings and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devmind.co.in/" />
+    <meta property="og:image" content="https://devmind.co.in/og-image.png" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Devmind – A–Z Digital Services" />
+    <meta name="twitter:description"
+        content="Domains & hosting, WordPress, SEO, design, marketing, ticket bookings and more." />
+    <meta name="twitter:image" content="https://devmind.co.in/og-image.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+        :root {
+            --bg: #0b1220;
+            /* deep blue */
+            --card: #0f172a;
+            /* slate-900 */
+            --muted: #94a3b8;
+            /* slate-400 */
+            --text: #e2e8f0;
+            /* slate-200 */
+            --brand: #0ea5e9;
+            /* sky-500 */
+            --accent: #22d3ee;
+            /* cyan-400 */
+            --ok: #10b981;
+            /* emerald */
+            --warn: #f59e0b;
+            /* amber */
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+            background: radial-gradient(1000px 600px at 80% -10%, rgba(14, 165, 233, .20), transparent 60%),
+                radial-gradient(800px 600px at -10% 20%, rgba(34, 211, 238, .18), transparent 60%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: saturate(140%) blur(8px);
+            background: linear-gradient(180deg, rgba(15, 23, 42, .85), rgba(15, 23, 42, .55));
+            border-bottom: 1px solid rgba(148, 163, 184, .15);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: .3px
+        }
+
+        .logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--brand), var(--accent));
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            color: #001;
+        }
+
+        .nav a.btn {
+            padding: 10px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, .2);
+            background: #0b1220;
+        }
+
+        .nav a.btn:hover {
+            border-color: rgba(148, 163, 184, .35)
+        }
+
+        .hero {
+            padding: 56px 24px 40px
+        }
+
+        .hero .wrap {
+            display: grid;
+            gap: 18px;
+            align-items: center
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            line-height: 1.1;
+            margin: 0
+        }
+
+        .hero p {
+            font-size: clamp(16px, 2.2vw, 18px);
+            color: var(--muted);
+            margin: 0
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 14px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(148, 163, 184, .25);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+            color: var(--text);
+        }
+
+        .btn.primary {
+            border-color: rgba(14, 165, 233, .5);
+            background: linear-gradient(180deg, rgba(14, 165, 233, .25), rgba(14, 165, 233, .10))
+        }
+
+        .btn.whatsapp {
+            border-color: rgba(16, 185, 129, .5);
+            background: linear-gradient(180deg, rgba(16, 185, 129, .22), rgba(16, 185, 129, .08))
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: .2px;
+            color: #001;
+            background: linear-gradient(135deg, var(--accent), var(--brand));
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 24px
+        }
+
+        .card {
+            background: rgba(15, 23, 42, .8);
+            border: 1px solid rgba(148, 163, 184, .18);
+            border-radius: 18px;
+            padding: 18px;
+            transition: transform .15s ease, border-color .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(148, 163, 184, .32)
+        }
+
+        .card h3 {
+            margin: 6px 0 8px;
+            font-size: 18px
+        }
+
+        .card p {
+            color: var(--muted);
+            margin: 0;
+            font-size: 14.5px
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 36px
+        }
+
+        @media (min-width:900px) {
+            .hero .wrap {
+                grid-template-columns: 1.2fr .8fr
+            }
+
+            .two-col {
+                grid-template-columns: 1.2fr .8fr
+            }
+        }
+
+        .panel {
+            background: rgba(15, 23, 42, .8);
+            border: 1px solid rgba(148, 163, 184, .18);
+            border-radius: 18px;
+            padding: 18px
+        }
+
+        .panel h2 {
+            margin: 0 0 8px
+        }
+
+        .list {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        .list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px
+        }
+
+        .tick {
+            width: 22px;
+            height: 22px;
+            border-radius: 7px;
+            display: grid;
+            place-items: center;
+            background: rgba(16, 185, 129, .15);
+            border: 1px solid rgba(16, 185, 129, .4);
+            color: #c7f9df;
+            font-weight: 800
+        }
+
+        .contact-box .row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px
+        }
+
+        .field {
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 24px;
+            color: var(--muted);
+            text-align: center
+        }
+
+        .foot {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .mini {
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        // smooth scroll for internal anchors
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if (a) { e.preventDefault(); document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' }); }
+        })
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Devmind",
+    "url": "https://devmind.co.in/",
+    "logo": "https://devmind.co.in/og-image.png",
+    "email": "mailto:devmind.co.in@gmail.com",
+    "telephone": "+91-8056541991",
+    "sameAs": [],
+    "address": {"@type": "PostalAddress", "addressCountry": "IN"},
+    "makesOffer": {
+      "@type": "OfferCatalog",
+      "name": "Digital Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ticket Booking – Bus, Train, Flight"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo & Branding Design"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Poster & Creative Design"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Business Profile (GMB) Design"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Social Media Marketing"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Digital Marketing & SEO"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Website Design & Development"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"WordPress Development"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"IT Services"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Domain & Hosting"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"A to Z Digital Solutions"}}
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo" aria-hidden="true">D</div>
+                <div>
+                    <div style="font-size:18px">Devmind</div>
+                    <div class="mini" style="color:var(--muted)">A–Z Digital Services</div>
+                </div>
+            </div>
+            <nav class="mini">
+                <a class="btn" href="#services">Services</a>
+                <a class="btn" href="#contact">Contact</a>
+                <a class="btn" href="mailto:devmind.co.in@gmail.com">Email</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container wrap">
+            <div>
+                <span class="pill">Fast • Reliable • Affordable</span>
+                <h1>Your one‑stop partner for Domains, Hosting, WordPress & Growth.</h1>
+                <p>
+                    We deliver complete solutions—from ticket bookings to logo & poster design, social media and digital
+                    marketing, SEO, and full website design & development. Need WordPress, IT services, or domain &
+                    hosting? We've got you covered—A to Z.
+                </p>
+                <div class="cta">
+                    <a class="btn primary" href="#contact">Get a Free Quote</a>
+                    <a class="btn whatsapp"
+                        href="https://wa.me/918056541991?text=Hi%20Devmind%2C%20I%27m%20interested%20in%20your%20services"
+                        target="_blank" rel="noopener">Chat on WhatsApp</a>
+                </div>
+                <div class="mini" style="margin-top:10px; color:var(--muted)">Call: <a href="tel:+918056541991">+91
+                        80565 41991</a> • Email: <a href="mailto:devmind.co.in@gmail.com">devmind.co.in@gmail.com</a>
+                </div>
+            </div>
+            <div>
+                <div class="panel">
+                    <h2 style="margin-top:0">What we do</h2>
+                    <ul class="list">
+                        <li><span class="tick">✓</span> Ticket Booking – <strong>Bus</strong>, <strong>Train</strong>,
+                            <strong>Flight</strong></li>
+                        <li><span class="tick">✓</span> <strong>Logo</strong> & <strong>Branding</strong> •
+                            <strong>Poster</strong> Design</li>
+                        <li><span class="tick">✓</span> <strong>Social Media</strong> Marketing • <strong>GMB</strong>
+                            Design</li>
+                        <li><span class="tick">✓</span> <strong>Digital Marketing</strong> & <strong>SEO</strong></li>
+                        <li><span class="tick">✓</span> <strong>Website</strong> Design & Development •
+                            <strong>WordPress</strong></li>
+                        <li><span class="tick">✓</span> <strong>IT Services</strong> • <strong>Domain</strong> &
+                            <strong>Hosting</strong></li>
+                        <li><span class="tick">✓</span> A to Z Digital Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="container">
+        <h2 style="margin:0 0 6px">Services</h2>
+        <p class="mini" style="color:var(--muted); margin:0 0 12px">Pick what you need—mix & match. We keep it simple.
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3>Ticket Booking</h3>
+                <p>Quick and reliable booking for <strong>bus</strong>, <strong>train</strong>, and
+                    <strong>flight</strong>—with support on call or WhatsApp.</p>
+            </div>
+            <div class="card">
+                <h3>Logo & Branding</h3>
+                <p>Memorable logos, brand kits, and posters to make your business look pro across print and digital.</p>
+            </div>
+            <div class="card">
+                <h3>Social Media & GMB</h3>
+                <p>Content, creatives, and profile optimization for Instagram, Facebook, and Google Business Profile.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Digital Marketing & SEO</h3>
+                <p>Get found online with on‑page SEO, local SEO, and ad‑ready landing pages that convert.</p>
+            </div>
+            <div class="card">
+                <h3>Website Design & Development</h3>
+                <p>Modern, responsive sites—
+                    <strong>WordPress</strong> or custom—optimized for speed and mobile.
+                </p>
+            </div>
+            <div class="card">
+                <h3>IT Services • Domain & Hosting</h3>
+                <p>Setup, migration, email, SSL, and maintenance. We handle the tech so you can focus on business.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container two-col" id="contact">
+        <div class="panel">
+            <h2>Contact</h2>
+            <div class="contact-box">
+                <div class="row">
+                    <div class="field"><strong>Phone:</strong> <a class="mono" href="tel:+918056541991">+91 80565
+                            41991</a></div>
+                    <div class="field"><strong>Email:</strong> <a class="mono"
+                            href="mailto:devmind.co.in@gmail.com">devmind.co.in@gmail.com</a></div>
+                    <div class="field"><strong>WhatsApp:</strong> <a class="mono" href="https://wa.me/918056541991"
+                            target="_blank" rel="noopener">wa.me/918056541991</a></div>
+                </div>
+                <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+                    <a class="btn whatsapp"
+                        href="https://wa.me/918056541991?text=Hi%20Devmind%2C%20I%27m%20interested%20in%20your%20services"
+                        target="_blank" rel="noopener">WhatsApp Now</a>
+                    <a class="btn"
+                        href="mailto:devmind.co.in@gmail.com?subject=Project%20inquiry%20from%20devmind.co.in&body=Hi%20Devmind%2C%20I%27d%20like%20help%20with...">Send
+                        Email</a>
+                    <a class="btn primary" href="tel:+918056541991">Call</a>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h2>Why Devmind?</h2>
+            <ul class="list">
+                <li><span class="tick">✓</span> One partner for everything—save time & cost</li>
+                <li><span class="tick">✓</span> Fast delivery with clear communication</li>
+                <li><span class="tick">✓</span> Mobile‑first, SEO‑ready websites</li>
+                <li><span class="tick">✓</span> Flexible support via phone, email, or WhatsApp</li>
+                <li><span class="tick">✓</span> Transparent pricing—no surprises</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="foot mini">
+            <span>© <span id="y"></span> Devmind</span>
+            <span>•</span>
+            <a href="#services">Services</a>
+            <span>•</span>
+            <a href="#contact">Contact</a>
+            <span>•</span>
+            <a href="mailto:devmind.co.in@gmail.com">Email</a>
+        </div>
+        <div class="mini" style="margin-top:8px">Made with ❤ for speed. Hosted anywhere (GitHub Pages, Netlify, Vercel).
+        </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+
+</html>
